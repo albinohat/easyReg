@@ -10,7 +10,9 @@
 ## Key          - A registry key.
 ## Subkey       - A key that resides directly under a key.
 ## Parent       - The key that resides directly above a key.
-## Value/Entry  - A data entry for a given key.
+## Entry        - A data entry for a given key.
+## Value        - The name of a given Entry.
+## Type         - The programmatic type of the data stored in a given Entry.
 ## Data         - The contents of a value.
 
 ## Standard Imports.
@@ -35,6 +37,7 @@ class RegKey():
 			self.parent      = path[:-(len(self.name) + 1)]
 		else:
 			self.parent      = ""
+			
 		self.list_of_subkeys = []
 		self.list_of_entries = []
 
